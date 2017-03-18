@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var Mongoose = require('./config');
+var Schema = Mongoose.Schema;
 
-var gameSchema = new mongoose.Schema({
+var gameSchema = new Schema({
     title:  String,
     platform: String,
     score:   String,
@@ -9,5 +9,6 @@ var gameSchema = new mongoose.Schema({
     editors_choice: String
 });
 
-var Game = mongoose.model('Game', gameSchema);
+var Game = Mongoose.model('Game', gameSchema);
+
 module.exports = Game;

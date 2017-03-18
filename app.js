@@ -28,8 +28,6 @@ app.use('/api', api);
 
 // app.use(app.router);
 // index.initialize(app);
-//Import Schema
-var Game = require('./mongodb/game-schema');
 
 
 
