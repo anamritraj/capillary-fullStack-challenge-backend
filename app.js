@@ -5,7 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//Include Routes
 var index = require('./routes/index');
+var api = require('./routes/api');
 
 var app = express();
 
@@ -22,7 +24,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/api', api);
 
+// app.use(app.router);
+// index.initialize(app);
 //Import Schema
 var Game = require('./mongodb/game-schema');
 
